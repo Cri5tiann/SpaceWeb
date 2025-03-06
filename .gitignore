@@ -1,0 +1,21 @@
+# Ignoră directorul node_modules
+node_modules/
+
+# Ignoră fișierul package-lock.json (opțional)
+package-lock.json
+
+# Ignoră fișierele de mediu (environment variables)
+.env
+
+# Ignoră fișierele de debug
+*.log
+
+# Ignoră fișierele generate de IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignoră fișierele de sistem
+.DS_Store
+Thumbs.db
