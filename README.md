@@ -6,8 +6,8 @@ This project displays a list of people currently in space using the Open Notify 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/Cri5tiann/SpaceWeb.git
+   cd SpaceWeb
 
 2. Install dependencies:
    ```bash
