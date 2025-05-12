@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             star.remove();
-        }, 2000); // Remove star after animation
+        }, 2000); // Șterge steaua după 2 secunde
     }
 
-    // Create the floating astronaut
+    // Crearea unui astronaut care se mișcă în jurul ecranului 
     function createAstronaut() {
         const astronaut = document.createElement("div");
         astronaut.classList.add("astronaut");
@@ -22,21 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
         astronaut.style.top = Math.random() * window.innerHeight + "px";
         body.appendChild(astronaut);
 
-        // Function to move the astronaut naturally
+        // Funcție pentru a muta astronautul în jurul ecranului
         function moveAstronaut() {
             const speed = 0.3; // Speed of movement (pixels per frame)
             const rotationSpeed = 0.2; // Speed of rotation (degrees per frame)
 
-            // Random target position
+            // Poziția țintă randomizată
             let targetX = Math.random() * window.innerWidth;
             let targetY = Math.random() * window.innerHeight;
 
-            // Function to update astronaut position
+            // Funcție pentru a actualiza poziția astronautului
             function updatePosition() {
                 const currentX = parseFloat(astronaut.style.left);
                 const currentY = parseFloat(astronaut.style.top);
 
-                // Move towards the target position
+                // Mișcarea astronautului către poziția țintă
                 const dx = targetX - currentX;
                 const dy = targetY - currentY;
                 const distance = Math.sqrt(dx * dx + dy * dy);
@@ -45,30 +45,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     astronaut.style.left = currentX + (dx / distance) * speed + "px";
                     astronaut.style.top = currentY + (dy / distance) * speed + "px";
                 } else {
-                    // Set a new random target position
+                    // setează o nouă poziție țintă randomizată
                     targetX = Math.random() * window.innerWidth;
                     targetY = Math.random() * window.innerHeight;
                 }
 
-                // Rotate the astronaut slightly
+                // Rotește  
                 const rotation = parseFloat(astronaut.style.transform.replace("rotate(", "").replace("deg)", "")) || 0;
                 astronaut.style.transform = `rotate(${rotation + rotationSpeed}deg)`;
 
-                // Continue the animation
+                // Continuă animația
                 requestAnimationFrame(updatePosition);
             }
 
-            // Start the animation
+            // Începe animația
             updatePosition();
         }
 
-        // Start moving the astronaut
+        // Începe mișcarea astronautului
         moveAstronaut();
     }
 
-    // Create more stars
+    // Creează stele la intervale regulate
     setInterval(createStar, 100); // Create a star every 100ms
 
-    // Create the astronaut
+    // Crează astronautul la început
     createAstronaut();
 });

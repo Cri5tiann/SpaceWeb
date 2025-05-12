@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // Close modal when clicking the close button
+    // Închide modalul când se apasă pe butonul de închidere
     closeModal.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Close modal when clicking outside the modal
+    // Închide modalul când se apasă pe orice parte a ferestrei
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
@@ -44,24 +44,24 @@ document.addEventListener("DOMContentLoaded", async () => {
             nameCell.innerText = person.name;
             craftCell.innerText = person.craft;
 
-            // Make astronaut name clickable
+            // Fă numele astronautului clicabil
             nameCell.style.cursor = "pointer";
             nameCell.addEventListener("click", async () => {
                 const info = await fetchWikipediaSummary(person.name);
                 modalTitle.innerText = person.name;
                 modalDescription.innerText = info.summary;
-                modalImage.src = info.image || ""; // Set image if available
-                modal.style.display = "block"; // Show the modal
+                modalImage.src = info.image || ""; // Setează imaginea dacă este disponibilă
+                modal.style.display = "block"; // Arată modalul
             });
 
-            // Make ship name clickable
+            // Fă numele navei clicabil
             craftCell.style.cursor = "pointer";
             craftCell.addEventListener("click", async () => {
                 const info = await fetchWikipediaSummary(person.craft);
                 modalTitle.innerText = person.craft;
                 modalDescription.innerText = info.summary;
-                modalImage.src = info.image || ""; // Set image if available
-                modal.style.display = "block"; // Show the modal
+                modalImage.src = info.image || ""; // Setează imaginea dacă este disponibilă
+                modal.style.display = "block"; // Arată modalul
             });
         });
     } catch (error) {

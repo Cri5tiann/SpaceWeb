@@ -23,7 +23,7 @@ body {
     z-index: -1;
 }
 
-/* Floating Astronaut */
+/* Astronautul mișcător */
 .astronaut {
     position: absolute;
     width: 80px;
@@ -31,10 +31,10 @@ body {
     background: url('astronaut1.png') no-repeat center center;
     background-size: contain;
     transition: left 0.1s linear, top 0.1s linear; /* Smooth movement */
-    z-index: -1; /* Ensure astronauts float behind the table */
+    z-index: -1; /* Asigurăte că astronautul zboară din spatele tabelului */
 }
 
-/* Table Centering */
+/* Centrarea tabelului */
 table {
     margin: auto;
     border-collapse: collapse;
@@ -49,12 +49,12 @@ table {
 th, td {
     border: 1px solid white;
     padding: 10px;
-    cursor: pointer; /* Make ship names clickable */
+    cursor: pointer; /* Facem denumirea navelor clickabile */
 }
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none; /* Ascuns by deffault */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -62,7 +62,7 @@ th, td {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Background-ul negru */
 }
 
 .modal-content {
@@ -88,7 +88,7 @@ th, td {
     color: white;
 }
 
-/* Falling Star Effect */
+/* Efectul de stea căzătoare */
 .star {
     position: absolute;
     width: 4px;
