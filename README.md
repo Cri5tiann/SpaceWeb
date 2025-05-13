@@ -15,7 +15,7 @@ This project displays a list of people currently in space using the Open Notify 
 
 4. Run the application:
    ```bash
-   npm start
+   node index.js
 
 5. Open your browser and navigate to:
    ```bash
